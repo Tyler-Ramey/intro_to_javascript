@@ -1,10 +1,14 @@
 const oddOrEven = (number) => {
- let result = number % 2;
- if (result === 0) {
-   return 'even';
+ if (Number.isInteger(number)) {
+   let result = number % 2;
+   if (result === 0) {
+     return 'even';
+   } else {
+     return 'odd';
+   }
  } else {
-   return 'odd';
+   return 'Not a valid argument';
  }
 };
 
-console.log(oddOrEven(5));
+console.log(oddOrEven('5'));
